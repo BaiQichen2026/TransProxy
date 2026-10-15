@@ -1,0 +1,21 @@
+[Unit]
+Description=TransProxy Monitor Panel (访问记录监控面板)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=admin
+Group=Users
+WorkingDirectory=/vol1/1000/transproxy
+ExecStart=/usr/bin/python3 /vol1/1000/transproxy/monitor.py
+# 日志分两路：monitor.py 自己写 logs/monitor.log（结构化的业务日志），
+# systemd 收走 stdout/stderr（未捕获的异常与 traceback 会落到这里）。
+# 两路分开才不会互相淹没。
+StandardOutput=append:/vol1/1000/transproxy/logs/stdout.log
+StandardError=append:/vol1/1000/transproxy/logs/stdout.log
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

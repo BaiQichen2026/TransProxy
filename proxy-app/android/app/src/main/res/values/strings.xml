@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TransProxy</string>
+    <string name="notice_1">本软件完全免费，仅供学习与网络技术研究使用。</string>
+    <string name="notice_2">请勿用于任何违反当地法律法规的用途。</string>
+    <string name="vpn_channel">TransProxy 运行中</string>
+</resources>

@@ -1,0 +1,21 @@
+# 运行/测试产物
+debug.log
+*.log
+
+# Go 构建输出
+*.exe
+!proxy-app/internal/common/assets/*.exe
+/dist/
+
+# Android 构建产物
+proxy-app/android/app/build/
+proxy-app/android/.gradle/
+proxy-app/android/build/
+proxy-app/android/local.properties
+
+# 监控端运行时数据
+proxy-app/monitor/data/
+
+# Python 缓存
+__pycache__/
+*.pyc
